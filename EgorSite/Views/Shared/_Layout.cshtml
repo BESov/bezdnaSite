@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="@Url.Content("~/Content/bootstrap/bootstrap.css")" rel="stylesheet" media="screen" />
+</head>
+<body>   
+    <div class="navbar navbar-default  navbar-fixed-top">
+	
+			<div class="container">
+				<div class="row">
+					<a class="navbar-brand">Как подготовиться к зомби аппокалипсу в Москве</a>
+					<ul class="nav nav-pills">
+                        <li> <a href="@Url.Action("Contact")">Контакты</a></li>
+						<li><a>Главная</a></li>
+						<li><a>Чертежи оружия и расходки</a></li>
+						<li><a>Mix карта Москвы</a></li>
+						<li><a>Советы</a></li>
+						<li><a>Зомби радио</a></li>
+                        <li><a href="@Url.Action("Contact")">Контакты</a></li>
+					</ul>
+				</div>	
+				
+		</div>
+	</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                @Html.Partial("_SideMenu") 
+
+            </div>
+            <div class="col-md-8">@RenderBody()</div>
+        </div>
+    </div>
+
+    
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>
